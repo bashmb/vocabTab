@@ -1,11 +1,11 @@
 {
 
   "manifest_version": 2,
-  "name": "bashtab",
-  "version": "0.1.2",
+  "name": "vocabTab",
+  "version": "0.0.1",
 
 
-  "description": "Replace the standard new tab screen with a beautiful image and unobtrusive clock.",
+  "description": "Practice your GRE Vocab every time you open a new tab.",
 
 
   "browser_action":{
@@ -13,6 +13,6 @@
   },
 
   "chrome_url_overrides" : {
-    "newtab": "bashtab.html"
+    "newtab": "vocabTab.html"
   }
 }
