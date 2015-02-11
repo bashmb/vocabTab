@@ -3,7 +3,7 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  /*background: url("img/road_scaled.jpg") no-repeat center center fixed; */
+  background: url("img/road_scaled.png") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -46,7 +46,7 @@ body {
 /* Customize container */
 @media (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 755px;
   }
 }
 .container-narrow > hr {
@@ -58,7 +58,7 @@ body {
   text-align: center;
   border-radius:0px; /*This is not working*/
   border-bottom: 1px solid #e5e5e5;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 .jumbotron .btn {
   padding: 14px 24px;
@@ -108,12 +108,13 @@ body {
   bottom: 0;
   width: inherit;
   /* Set the fixed height of the footer here */
-  height: 60px;
+  height: 135px;
   background-color: #f5f5f5;
+  opacity: 0.8;
 }
 .ad {
   position: absolute;
-  bottom: 60px;
+  bottom: 100px;
   width: inherit;
   /* Set the fixed height of the footer here */
   height: 60px;
