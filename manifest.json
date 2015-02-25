@@ -2,15 +2,19 @@
 
   "manifest_version": 2,
   "name": "vocabTab",
-  "version": "0.0.4",
+  "version": "0.0.5",
 
 
   "description": "Practice your GRE or GMAT Vocab every time you open a new tab.",
-
+  "permissions": [
+    "storage"
+    ],
 
   "browser_action":{
     "default_icon": "/img/icon128.png"
   },
+
+  "options_page": "options.html",
 
   "chrome_url_overrides" : {
     "newtab": "vocabTab.html"
