@@ -9,8 +9,11 @@ $('.save').click(function () {
 	if (newName){
 		chrome.storage.sync.set({'userName': newName})
 	}
+	window.location='vocabTab.html'
 	 }
 )
+
+
 
 var getStorage = function(){
 	console.log('getStorage')
@@ -21,9 +24,11 @@ var getStorage = function(){
 	return data
 }
 
-$('.getStuff').click($('.stuff').html(function(e){
-	e.preventDefault;
-	return 2+2}))
+$('.getStuff').click(function() {
+	var a = chrome.storage.sync.get('userName', function(obj) {
+		console.log(obj['userName'])
+	})
+})
 
 
 // $('.getStuff').click(function() {
