@@ -9,7 +9,14 @@ $('.save').click(function () {
 	if (newName){
 		chrome.storage.sync.set({'userName': newName})
 	}
-	window.location='vocabTab.html'
+	var backCheck = $('#background-checkbox').val()
+	if (backCheck === true){
+		chrome.storage.sync.set({'backCheck': true})
+	} else {
+		chrome.storage.sync.set({'backCheck': false})
+	}
+	window.location='options.html'
+	return 
 	}
 )
 
@@ -17,11 +24,14 @@ var getStorage = function(){
 	var data = chrome.storage.sync.get(function(obj){
 		return obj
 	})
-	return data
+	console.log(data)
+	return data['userName']
 }
 
 $('.getStuff').click(function() {
-	getStorage()
+	var stuff = chrome.storage.sync.get( function(obj){
+		console.log(obj)
+	})
 })
 
 
@@ -31,4 +41,9 @@ $('.getStuff').click(function() {
 
 var a = chrome.storage.sync.get('userName', function(obj) {
 	$('#userName').attr("placeholder",obj['userName']);		
+})
+
+
+var b = chrome.storage.sync.get('backCheck', function(obj) {
+	$('#background-checkbox').attr(obj['backCheck']);		
 })

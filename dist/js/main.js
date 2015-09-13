@@ -7,3 +7,9 @@ var a = chrome.storage.sync.get('userName', function(obj) {
 		var theName = name
 		namespot.innerHTML="hello, " + theName + ' <i class="glyphicon glyphicon-wrench"></i>'	
 })
+
+var b = chrome.storage.sync.get('backCheck', function(obj){
+	console.log(obj['backCheck'])
+	var backCheck = obj['backCheck']
+	return backCheck
+})
