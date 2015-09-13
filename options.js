@@ -13,8 +13,6 @@ $('.save').click(function () {
 	}
 )
 
-
-
 var getStorage = function(){
 	var data = chrome.storage.sync.get(function(obj){
 		return obj
@@ -34,6 +32,3 @@ $('.getStuff').click(function() {
 var a = chrome.storage.sync.get('userName', function(obj) {
 	$('#userName').attr("placeholder",obj['userName']);		
 })
-
-
-console.log("This loaded");
