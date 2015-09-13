@@ -16,12 +16,9 @@ $('.save').click(function () {
 
 
 var getStorage = function(){
-	console.log('getStorage')
-
 	var data = chrome.storage.sync.get(function(obj){
 		return obj
 	})
-	console.log(data)
 	return data
 }
 
@@ -35,15 +32,7 @@ $('.getStuff').click(function() {
 // 	})
 
 var a = chrome.storage.sync.get('userName', function(obj) {
-
-	var name = obj['userName']
-	
-	namespot=document.getElementById? document.getElementById("name"): document.all.namespot
-
-		var theName = name
-		$('#userName').attr("placeholder",theName);
-	
-		
+	$('#userName').attr("placeholder",obj['userName']);		
 })
 
 
