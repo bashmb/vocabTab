@@ -33,3 +33,18 @@ $('.getStuff').click(function() {
 // $('.getStuff').click(function() {
 // 	chrome.storage.sync.get(function(obj){console.log(obj)})
 // 	})
+
+var a = chrome.storage.sync.get('userName', function(obj) {
+
+	var name = obj['userName']
+	
+	namespot=document.getElementById? document.getElementById("name"): document.all.namespot
+
+		var theName = name
+		$('#userName').attr("placeholder",theName);
+	
+		
+})
+
+
+console.log("This loaded");
