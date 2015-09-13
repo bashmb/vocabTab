@@ -9,11 +9,11 @@ $('.save').click(function () {
 	if (newName){
 		chrome.storage.sync.set({'userName': newName})
 	}
-	var backCheck = $('#background-checkbox').val()
+	var backCheck = $('#background-checkbox')
 	if (backCheck === true){
 		chrome.storage.sync.set({'backCheck': true})
 	} else {
-		chrome.storage.sync.set({'backCheck': false})
+		chrome.storage.sync.set({'backCheck': 'zebra'})
 	}
 	window.location='options.html'
 	return 
@@ -32,6 +32,7 @@ $('.getStuff').click(function() {
 	var stuff = chrome.storage.sync.get( function(obj){
 		console.log(obj)
 	})
+	$('#bigTitle').text($('#titleIt').val())
 })
 
 
